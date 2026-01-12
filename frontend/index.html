@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <title>AI Cybersec Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/static/styles.css" rel="stylesheet" />
+  <!-- Cytoscape.js CDN -->
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <div id="app" class="dark">
+    <header class="topbar">
+      <h1>Cybee Threat Detection -- Graph Dashboard</h1>
+      <div class="controls">
+        <button id="refreshBtn">Refresh Graph</button>
+        <button id="sampleEventBtn">Send Sample Event</button>
+      </div>
+    </header>
+    <main class="main">
+      <section id="graph" class="graph"></section>
+      <aside class="panel">
+        <h2>Alerts & Events</h2>
+        <pre id="events" class="events">No events yet</pre>
+      </aside>
+    </main>
+    <footer class="foot">Starter app — replace stubs with production integrations.</footer>
+  </div>
+  <div class="tools">
+    <button onclick="checkIPReputation(prompt('Enter IP to check:'))">IP Reputation</button>
+    <button onclick="checkPort(prompt('Enter port to check:'))">Port Checker</button>
+    <button onclick="checkHash(prompt('Enter hash to check:'))">Hash Lookup</button>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
